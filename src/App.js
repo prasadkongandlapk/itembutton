@@ -1,4 +1,4 @@
-import {Route, Switch, Redirect} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 
 import LoginForm from './components/LoginForm'
 import Home from './components/Home'
@@ -17,8 +17,7 @@ const App = () => (
     <ProtectedRoute exact path="/products" component={Products} />
     <ProtectedRoute exact path="/products/:id" component={ProductItemDetails} />
     <ProtectedRoute exact path="/cart" component={Cart} />
-    <Route path="/not-found" component={NotFound} />
-    <Redirect to="not-found" />
+    <Route component={NotFound} />
   </Switch>
 )
 
